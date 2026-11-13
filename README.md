@@ -3,11 +3,6 @@
 A Claude Code skill that makes the model write a runnable checklist for your task,
 build against it, and report only what real checks confirmed.
 
-![expert-loop state machine. A mascot walks Domain and Owner (the Frame step), Checklist, Build and Verify. Verify fails once, the loop returns to Build, Verify passes, and the run ends at Report.](docs/expert-loop-state-machine.svg)
-
-*Frame appears as its two beats, Domain and Owner. One failed Verify sends the mascot back
-to Build for a fix round.*
-
 ## Install
 
 For all your projects, as a plugin:

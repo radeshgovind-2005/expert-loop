@@ -1,0 +1,14 @@
+{
+  "name": "expert-loop",
+  "owner": { "name": "radeshgovind-2005" },
+  "metadata": { "description": "The expert-loop skill: framed, checklist-driven, verified answers." },
+  "plugins": [
+    {
+      "name": "expert-loop",
+      "source": "./",
+      "description": "Frame, checklist, build, verify, fix, report. Verification uses real checks, not self-opinion.",
+      "category": "productivity",
+      "keywords": ["prompting", "verification", "checklist"]
+    }
+  ]
+}

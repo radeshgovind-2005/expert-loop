@@ -1,0 +1,2 @@
+LINT_CMD="python3 tests/validate.py"
+TEST_CMD=""

@@ -1,0 +1,8 @@
+{
+  "name": "expert-loop",
+  "description": "Frame the task in its domain, build a runnable checklist, then build, verify against real checks, fix and report gaps.",
+  "author": { "name": "radeshgovind-2005" },
+  "homepage": "https://github.com/radeshgovind-2005/expert-loop",
+  "repository": "https://github.com/radeshgovind-2005/expert-loop",
+  "keywords": ["prompting", "verification", "checklist", "build-verify-fix"]
+}

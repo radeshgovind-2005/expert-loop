@@ -3,7 +3,7 @@
 A skill for better answers from AI: frame the task in its domain, build a runnable
 checklist, build, verify against real checks, fix, and report gaps.
 
-![expert-loop state machine: Domain, Owner, Checklist, Solve, Review, Report, with a bounded fix loop from Review back to Solve](docs/expert-loop.svg)
+![expert-loop state machine: Domain, Owner, Checklist, Solve, Review, Report, with a bounded fix loop from Review back to Solve](docs/expert-loop-state-machine.svg)
 
 The mascot walks the state machine one state at a time, including one failed review and a fix round.
 

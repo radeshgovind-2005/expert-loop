@@ -1,94 +1,154 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" role="img" aria-labelledby="t d">
-  <title id="t">expert-loop animation</title>
-  <desc id="d">A token moves through Frame, Checklist, Build and Verify. Verify fails once, the token goes to Fix and back to Verify, then passes to Report.</desc>
-  <style>
-    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e8e6e1; }
-    .node { fill: #26241f; stroke: #5b574d; stroke-width: 2; }
-    .glow { fill: #d97757; opacity: 0; }
-    .name { font-size: 20px; font-weight: 600; text-anchor: middle; }
-    .sub { font-size: 12.5px; text-anchor: middle; fill: #b9b5a8; }
-    .edge { stroke: #5b574d; stroke-width: 2.5; fill: none; }
-    .fail { stroke: #d97757; stroke-dasharray: 6 5; }
-    .tag { font-size: 14px; font-weight: 600; text-anchor: middle; opacity: 0; }
-    .cap { font-size: 13px; fill: #b9b5a8; text-anchor: middle; }
-  </style>
-  <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#5b574d"/>
-    </marker>
-    <marker id="f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#d97757"/>
-    </marker>
-  </defs>
-  <rect width="900" height="380" rx="16" fill="#1c1b18"/>
-
-  <!-- edges -->
-  <line class="edge" x1="140" y1="120" x2="180" y2="120" marker-end="url(#a)"/>
-  <line class="edge" x1="320" y1="120" x2="360" y2="120" marker-end="url(#a)"/>
-  <line class="edge" x1="500" y1="120" x2="540" y2="120" marker-end="url(#a)"/>
-  <line class="edge" x1="680" y1="120" x2="720" y2="120" marker-end="url(#a)"/>
-  <path class="edge fail" d="M590 160 L590 235" marker-end="url(#f)"/>
-  <path class="edge fail" d="M650 235 L650 160" marker-end="url(#f)"/>
-
-  <!-- nodes -->
-  <g>
-    <rect class="node" x="20" y="80" width="120" height="80" rx="12"/>
-    <rect class="glow" x="20" y="80" width="120" height="80" rx="12">
-      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.01;0.04;0.08;1" values="0.55;0.55;0.55;0;0"/>
-    </rect>
-    <text class="name" x="80" y="116">Frame</text><text class="sub" x="80" y="138">domain + owner</text>
-  </g>
-  <g>
-    <rect class="node" x="180" y="80" width="140" height="80" rx="12"/>
-    <rect class="glow" x="180" y="80" width="140" height="80" rx="12">
-      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.14;0.17;0.22;0.25;1" values="0;0;0.55;0.55;0;0"/>
-    </rect>
-    <text class="name" x="250" y="116">Checklist</text><text class="sub" x="250" y="138">runnable criteria</text>
-  </g>
-  <g>
-    <rect class="node" x="360" y="80" width="140" height="80" rx="12"/>
-    <rect class="glow" x="360" y="80" width="140" height="80" rx="12">
-      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.34;0.37;0.42;0.45;1" values="0;0;0.55;0.55;0;0"/>
-    </rect>
-    <text class="name" x="430" y="116">Build</text><text class="sub" x="430" y="138">smallest change</text>
-  </g>
-  <g>
-    <rect class="node" x="540" y="80" width="140" height="80" rx="12"/>
-    <rect class="glow" x="540" y="80" width="140" height="80" rx="12">
-      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.55;0.58;0.62;0.65;0.74;0.77;0.81;0.84;1" values="0;0;0.55;0.55;0;0;0.55;0.55;0;0"/>
-    </rect>
-    <text class="name" x="610" y="116">Verify</text><text class="sub" x="610" y="138">run real checks</text>
-  </g>
-  <g>
-    <rect class="node" x="720" y="80" width="160" height="80" rx="12"/>
-    <rect class="glow" x="720" y="80" width="160" height="80" rx="12" style="fill:#7bb274">
-      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.93;0.96;0.995;1" values="0;0;0.55;0.55;0"/>
-    </rect>
-    <text class="name" x="800" y="116">Report</text><text class="sub" x="800" y="138">evidence + gaps</text>
-  </g>
-  <g>
-    <rect class="node" x="540" y="235" width="140" height="70" rx="12"/>
-    <rect class="glow" x="540" y="235" width="140" height="70" rx="12">
-      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.65;0.67;0.71;0.73;1" values="0;0;0.55;0.55;0;0"/>
-    </rect>
-    <text class="name" x="610" y="268">Fix</text><text class="sub" x="610" y="288">only what failed</text>
-  </g>
-
-  <!-- tags -->
-  <text class="tag" x="610" y="64" style="fill:#7bb274">
-    all pass
-    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.83;0.86;0.97;0.995;1" values="0;0;1;1;0;0"/>
-  </text>
-  <text class="tag" x="500" y="205" style="fill:#d97757">
-    fail
-    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.64;0.67;0.74;0.77;1" values="0;0;1;1;0;0"/>
-  </text>
-
-  <!-- token -->
-  <circle r="7" fill="#f4f1ea" stroke="#d97757" stroke-width="3">
-    <animateMotion dur="14s" repeatCount="indefinite" calcMode="linear"
-      path="M80 152 L610 152 L610 235 L610 152 L800 152"/>
-  </circle>
-
-  <text class="cap" x="450" y="345">Stop after 3 rounds, or when the same failure repeats twice, and report the blocker.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="t d">
+<title id="t">expert-loop, state by state</title>
+<desc id="d">One state at a time: identify the domain, define the owner, list practices and anti-patterns, define criteria, build, run checks, review, score, fix, re-run, report.</desc>
+<style>
+text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#e8e6e1}
+.rail{font-size:15px} .ph{font-size:11px;fill:#8d897c;letter-spacing:.08em;text-transform:uppercase}
+.big{font-size:26px;font-weight:650} .prompt{font-size:15px;fill:#b9b5a8;font-style:italic}
+.line{font-size:19px} .ok{fill:#8fc386} .bad{fill:#e58a67} .meta{font-size:13px;fill:#8d897c}
+</style>
+<rect width="960" height="500" rx="16" fill="#1c1b18"/>
+<text class="meta" x="30" y="38">Task: add a unique email column to a large Postgres table</text>
+<line x1="300" y1="56" x2="300" y2="470" stroke="#3a3830" stroke-width="2"/>
+<rect x="20" y="62" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07127;0.07692;1.00000" values="0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="84">1. IdentifyDomain</text>
+<text class="ph" x="282" y="84" text-anchor="end">Frame</text>
+<rect x="20" y="98" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07692;0.08258;0.14819;0.15385;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="120">2. DefineOwner</text>
+<text class="ph" x="282" y="120" text-anchor="end">Frame</text>
+<rect x="20" y="134" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.15385;0.15950;0.22511;0.23077;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="156">3. ListPractices</text>
+<text class="ph" x="282" y="156" text-anchor="end">Checklist</text>
+<rect x="20" y="170" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23077;0.23643;0.30204;0.30769;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="192">4. ListAntiPatterns</text>
+<text class="ph" x="282" y="192" text-anchor="end">Checklist</text>
+<rect x="20" y="206" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.30769;0.31335;0.37896;0.38462;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="228">5. DefineCriteria</text>
+<text class="ph" x="282" y="228" text-anchor="end">Checklist</text>
+<rect x="20" y="242" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.38462;0.39027;0.45588;0.46154;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="264">6. Build</text>
+<text class="ph" x="282" y="264" text-anchor="end">Build</text>
+<rect x="20" y="278" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.46154;0.46719;0.53281;0.53846;0.76923;0.77489;0.84050;0.84615;1.00000" values="0;0;0.32;0.32;0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="300">7. RunChecks</text>
+<text class="ph" x="282" y="300" text-anchor="end">Verify</text>
+<rect x="20" y="314" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.53846;0.54412;0.60973;0.61538;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="336">8. ReviewJudgement</text>
+<text class="ph" x="282" y="336" text-anchor="end">Verify</text>
+<rect x="20" y="350" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.61538;0.62104;0.68665;0.69231;0.84615;0.85181;0.91742;0.92308;1.00000" values="0;0;0.32;0.32;0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="372">9. Score</text>
+<text class="ph" x="282" y="372" text-anchor="end">Verify</text>
+<rect x="20" y="386" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.69231;0.69796;0.76357;0.76923;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
+<text class="rail" x="34" y="408">10. Fix</text>
+<text class="ph" x="282" y="408" text-anchor="end">Fix</text>
+<rect x="20" y="422" width="262" height="30" rx="8" fill="#d97757" opacity="0">
+<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.92308;0.92873;0.99434;1.00000" values="0;0;0.32;0.32;0"/></rect>
+<text class="rail" x="34" y="444">11. Report</text>
+<text class="ph" x="282" y="444" text-anchor="end">End</text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07127;0.07692;1.00000" values="1;1;0;0"/>
+<text class="big" x="330" y="112">IdentifyDomain</text>
+<text class="prompt" x="330" y="142">"Identify the exact domain of the task"</text>
+</g>
+<text class="line" x="330" y="205" opacity="0">Domain: PostgreSQL schema migration on a large live table<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.00905;0.01471;0.07127;0.07692;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">Not: generic SQL, not an ORM question<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.02149;0.02715;0.07127;0.07692;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07127;0.07692;1.00000" values="1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07692;0.08258;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">DefineOwner</text>
+<text class="prompt" x="330" y="142">"Define the senior expert"</text>
+</g>
+<text class="line" x="330" y="205" opacity="0">Owner: senior database engineer<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.08597;0.09163;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">Priorities: no downtime, safe rollback, data integrity<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.09842;0.10407;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="293" opacity="0">Trade-off accepted: slower rollout for safety<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.11086;0.11652;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07692;0.08258;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.15385;0.15950;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">ListPractices</text>
+<text class="prompt" x="330" y="142">"Key techniques, tools, conventions"</text>
+</g>
+<text class="line" x="330" y="205" opacity="0">Add column as nullable, backfill in batches<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.16290;0.16855;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">CREATE UNIQUE INDEX CONCURRENTLY<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.17534;0.18100;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="293" opacity="0">Reversible up/down migration, tested on a copy<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.18778;0.19344;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.15385;0.15950;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23077;0.23643;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">ListAntiPatterns</text>
+<text class="prompt" x="330" y="142">"Common anti-patterns"</text>
+</g>
+<text class="line" x="330" y="205" opacity="0">ALTER that takes a long table lock<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23982;0.24548;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">NOT NULL + default on a big table in one step<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.25226;0.25792;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="293" opacity="0">Down migration that was never run<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.26471;0.27036;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23077;0.23643;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.30769;0.31335;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">DefineCriteria</text>
+<text class="prompt" x="330" y="142">"Turn the lists into criteria"</text>
+</g>
+<text class="line" x="330" y="205" opacity="0">runnable: migration applies to a test database<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.31674;0.32240;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">runnable: rollback restores the old schema<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.32919;0.33484;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="293" opacity="0">runnable: no lock held longer than 1 s<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.34163;0.34729;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="337" opacity="0">judgement: names follow repo convention<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.35407;0.35973;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.30769;0.31335;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.38462;0.39027;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">Build</text>
+<text class="prompt" x="330" y="142">"Solve the task, applying the list"</text>
+</g>
+<text class="line" x="330" y="205" opacity="0">Writes 0042_add_user_email.sql (up and down)<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.39367;0.39932;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">Smallest change that fits every criterion<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.40611;0.41176;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.38462;0.39027;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.46154;0.46719;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">RunChecks</text>
+<text class="prompt" x="330" y="142">"Run every runnable check"</text>
+</g>
+<text class="line ok" x="330" y="205" opacity="0">apply to test database: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.47059;0.47624;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line ok" x="330" y="249" opacity="0">lock time 0.2 s: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.48303;0.48869;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line bad" x="330" y="293" opacity="0">rollback: FAIL, down drops the wrong index<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.49548;0.50113;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.46154;0.46719;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.53846;0.54412;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">ReviewJudgement</text>
+<text class="prompt" x="330" y="142">"Review the answer against the list"</text>
+</g>
+<text class="line ok" x="330" y="205" opacity="0">naming follows convention: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.54751;0.55317;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">Hostile review: backfill batch size not justified<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.55995;0.56561;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.53846;0.54412;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.61538;0.62104;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">Score</text>
+<text class="prompt" x="330" y="142">"Score: gaps, assumptions, risks"</text>
+</g>
+<text class="line bad" x="330" y="205" opacity="0">1 criterion failed, round 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.62443;0.63009;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">Verdict: go to Fix, not Report<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.63688;0.64253;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.61538;0.62104;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.69231;0.69796;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">Fix</text>
+<text class="prompt" x="330" y="142">"Fix only what failed"</text>
+</g>
+<text class="line" x="330" y="205" opacity="0">Round 1: down migration now drops the index it created<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.70136;0.70701;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line" x="330" y="249" opacity="0">Nothing that passed is rewritten<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.71380;0.71946;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.69231;0.69796;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.76923;0.77489;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">RunChecks</text>
+<text class="prompt" x="330" y="142">"Re-run failed and affected checks"</text>
+</g>
+<text class="line ok" x="330" y="205" opacity="0">apply: pass    lock: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.77828;0.78394;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="line ok" x="330" y="249" opacity="0">rollback: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.79072;0.79638;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.76923;0.77489;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.84615;0.85181;0.91742;0.92308;1.00000" values="0;0;1;1;0;0"/>
+<text class="big" x="330" y="112">Score</text>
+<text class="prompt" x="330" y="142">"Score again"</text>
+</g>
+<text class="line ok" x="330" y="205" opacity="0">No failures. Verdict: Report<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.85520;0.86086;0.91742;0.92308;1.00000" values="0;0;1;1;0;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.84615;0.85181;0.91742;0.92308;1.00000" values="0;0;1;1;0;0"/></text>
+<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.92308;0.92873;0.99434;1.00000" values="0;0;1;1;0"/>
+<text class="big" x="330" y="112">Report</text>
+<text class="prompt" x="330" y="142">"Report: result, evidence, assumptions, risks"</text>
+</g>
+<text class="line ok" x="330" y="205" opacity="0">Result: migration + rollback, all runnable checks passed<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.93213;0.93778;0.99434;1.00000" values="0;0;1;1;0"/></text>
+<text class="line" x="330" y="249" opacity="0">Assumption: table under 50 M rows<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.94457;0.95023;0.99434;1.00000" values="0;0;1;1;0"/></text>
+<text class="line bad" x="330" y="293" opacity="0">Risk: backfill time on production is unverified<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.95701;0.96267;0.99434;1.00000" values="0;0;1;1;0"/></text>
+<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.92308;0.92873;0.99434;1.00000" values="0;0;1;1;0"/></text>
 </svg>

@@ -3,7 +3,9 @@
 A skill for better answers from AI: frame the task in its domain, build a runnable
 checklist, build, verify against real checks, fix, and report gaps.
 
-![expert-loop: a token moves through Frame, Checklist, Build and Verify, fails once, passes through Fix, then reaches Report](docs/expert-loop.svg)
+![expert-loop, one state at a time: identify the domain, define the owner, list practices and anti-patterns, define criteria, build, run checks, fix a failure, re-run, report](docs/expert-loop.svg)
+
+The animation walks one sample task through each state, one at a time, including a failed check and a fix round.
 
 ## Install (all your projects)
 

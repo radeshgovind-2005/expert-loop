@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" role="img" aria-labelledby="t d">
+  <title id="t">expert-loop animation</title>
+  <desc id="d">A token moves through Frame, Checklist, Build and Verify. Verify fails once, the token goes to Fix and back to Verify, then passes to Report.</desc>
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e8e6e1; }
+    .node { fill: #26241f; stroke: #5b574d; stroke-width: 2; }
+    .glow { fill: #d97757; opacity: 0; }
+    .name { font-size: 20px; font-weight: 600; text-anchor: middle; }
+    .sub { font-size: 12.5px; text-anchor: middle; fill: #b9b5a8; }
+    .edge { stroke: #5b574d; stroke-width: 2.5; fill: none; }
+    .fail { stroke: #d97757; stroke-dasharray: 6 5; }
+    .tag { font-size: 14px; font-weight: 600; text-anchor: middle; opacity: 0; }
+    .cap { font-size: 13px; fill: #b9b5a8; text-anchor: middle; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5b574d"/>
+    </marker>
+    <marker id="f" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#d97757"/>
+    </marker>
+  </defs>
+  <rect width="900" height="380" rx="16" fill="#1c1b18"/>
+
+  <!-- edges -->
+  <line class="edge" x1="140" y1="120" x2="180" y2="120" marker-end="url(#a)"/>
+  <line class="edge" x1="320" y1="120" x2="360" y2="120" marker-end="url(#a)"/>
+  <line class="edge" x1="500" y1="120" x2="540" y2="120" marker-end="url(#a)"/>
+  <line class="edge" x1="680" y1="120" x2="720" y2="120" marker-end="url(#a)"/>
+  <path class="edge fail" d="M590 160 L590 235" marker-end="url(#f)"/>
+  <path class="edge fail" d="M650 235 L650 160" marker-end="url(#f)"/>
+
+  <!-- nodes -->
+  <g>
+    <rect class="node" x="20" y="80" width="120" height="80" rx="12"/>
+    <rect class="glow" x="20" y="80" width="120" height="80" rx="12">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.01;0.04;0.08;1" values="0.55;0.55;0.55;0;0"/>
+    </rect>
+    <text class="name" x="80" y="116">Frame</text><text class="sub" x="80" y="138">domain + owner</text>
+  </g>
+  <g>
+    <rect class="node" x="180" y="80" width="140" height="80" rx="12"/>
+    <rect class="glow" x="180" y="80" width="140" height="80" rx="12">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.14;0.17;0.22;0.25;1" values="0;0;0.55;0.55;0;0"/>
+    </rect>
+    <text class="name" x="250" y="116">Checklist</text><text class="sub" x="250" y="138">runnable criteria</text>
+  </g>
+  <g>
+    <rect class="node" x="360" y="80" width="140" height="80" rx="12"/>
+    <rect class="glow" x="360" y="80" width="140" height="80" rx="12">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.34;0.37;0.42;0.45;1" values="0;0;0.55;0.55;0;0"/>
+    </rect>
+    <text class="name" x="430" y="116">Build</text><text class="sub" x="430" y="138">smallest change</text>
+  </g>
+  <g>
+    <rect class="node" x="540" y="80" width="140" height="80" rx="12"/>
+    <rect class="glow" x="540" y="80" width="140" height="80" rx="12">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.55;0.58;0.62;0.65;0.74;0.77;0.81;0.84;1" values="0;0;0.55;0.55;0;0;0.55;0.55;0;0"/>
+    </rect>
+    <text class="name" x="610" y="116">Verify</text><text class="sub" x="610" y="138">run real checks</text>
+  </g>
+  <g>
+    <rect class="node" x="720" y="80" width="160" height="80" rx="12"/>
+    <rect class="glow" x="720" y="80" width="160" height="80" rx="12" style="fill:#7bb274">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.93;0.96;0.995;1" values="0;0;0.55;0.55;0"/>
+    </rect>
+    <text class="name" x="800" y="116">Report</text><text class="sub" x="800" y="138">evidence + gaps</text>
+  </g>
+  <g>
+    <rect class="node" x="540" y="235" width="140" height="70" rx="12"/>
+    <rect class="glow" x="540" y="235" width="140" height="70" rx="12">
+      <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.65;0.67;0.71;0.73;1" values="0;0;0.55;0.55;0;0"/>
+    </rect>
+    <text class="name" x="610" y="268">Fix</text><text class="sub" x="610" y="288">only what failed</text>
+  </g>
+
+  <!-- tags -->
+  <text class="tag" x="610" y="64" style="fill:#7bb274">
+    all pass
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.83;0.86;0.97;0.995;1" values="0;0;1;1;0;0"/>
+  </text>
+  <text class="tag" x="500" y="205" style="fill:#d97757">
+    fail
+    <animate attributeName="opacity" dur="14s" repeatCount="indefinite" keyTimes="0;0.64;0.67;0.74;0.77;1" values="0;0;1;1;0;0"/>
+  </text>
+
+  <!-- token -->
+  <circle r="7" fill="#f4f1ea" stroke="#d97757" stroke-width="3">
+    <animateMotion dur="14s" repeatCount="indefinite" calcMode="linear"
+      path="M80 152 L610 152 L610 235 L610 152 L800 152"/>
+  </circle>
+
+  <text class="cap" x="450" y="345">Stop after 3 rounds, or when the same failure repeats twice, and report the blocker.</text>
+</svg>

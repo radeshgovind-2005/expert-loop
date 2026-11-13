@@ -1,154 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="t d">
-<title id="t">expert-loop, state by state</title>
-<desc id="d">One state at a time: identify the domain, define the owner, list practices and anti-patterns, define criteria, build, run checks, review, score, fix, re-run, report.</desc>
-<style>
-text{font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#e8e6e1}
-.rail{font-size:15px} .ph{font-size:11px;fill:#8d897c;letter-spacing:.08em;text-transform:uppercase}
-.big{font-size:26px;font-weight:650} .prompt{font-size:15px;fill:#b9b5a8;font-style:italic}
-.line{font-size:19px} .ok{fill:#8fc386} .bad{fill:#e58a67} .meta{font-size:13px;fill:#8d897c}
-</style>
-<rect width="960" height="500" rx="16" fill="#1c1b18"/>
-<text class="meta" x="30" y="38">Task: add a unique email column to a large Postgres table</text>
-<line x1="300" y1="56" x2="300" y2="470" stroke="#3a3830" stroke-width="2"/>
-<rect x="20" y="62" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07127;0.07692;1.00000" values="0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="84">1. IdentifyDomain</text>
-<text class="ph" x="282" y="84" text-anchor="end">Frame</text>
-<rect x="20" y="98" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07692;0.08258;0.14819;0.15385;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="120">2. DefineOwner</text>
-<text class="ph" x="282" y="120" text-anchor="end">Frame</text>
-<rect x="20" y="134" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.15385;0.15950;0.22511;0.23077;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="156">3. ListPractices</text>
-<text class="ph" x="282" y="156" text-anchor="end">Checklist</text>
-<rect x="20" y="170" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23077;0.23643;0.30204;0.30769;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="192">4. ListAntiPatterns</text>
-<text class="ph" x="282" y="192" text-anchor="end">Checklist</text>
-<rect x="20" y="206" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.30769;0.31335;0.37896;0.38462;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="228">5. DefineCriteria</text>
-<text class="ph" x="282" y="228" text-anchor="end">Checklist</text>
-<rect x="20" y="242" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.38462;0.39027;0.45588;0.46154;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="264">6. Build</text>
-<text class="ph" x="282" y="264" text-anchor="end">Build</text>
-<rect x="20" y="278" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.46154;0.46719;0.53281;0.53846;0.76923;0.77489;0.84050;0.84615;1.00000" values="0;0;0.32;0.32;0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="300">7. RunChecks</text>
-<text class="ph" x="282" y="300" text-anchor="end">Verify</text>
-<rect x="20" y="314" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.53846;0.54412;0.60973;0.61538;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="336">8. ReviewJudgement</text>
-<text class="ph" x="282" y="336" text-anchor="end">Verify</text>
-<rect x="20" y="350" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.61538;0.62104;0.68665;0.69231;0.84615;0.85181;0.91742;0.92308;1.00000" values="0;0;0.32;0.32;0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="372">9. Score</text>
-<text class="ph" x="282" y="372" text-anchor="end">Verify</text>
-<rect x="20" y="386" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.69231;0.69796;0.76357;0.76923;1.00000" values="0;0;0.32;0.32;0;0"/></rect>
-<text class="rail" x="34" y="408">10. Fix</text>
-<text class="ph" x="282" y="408" text-anchor="end">Fix</text>
-<rect x="20" y="422" width="262" height="30" rx="8" fill="#d97757" opacity="0">
-<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.92308;0.92873;0.99434;1.00000" values="0;0;0.32;0.32;0"/></rect>
-<text class="rail" x="34" y="444">11. Report</text>
-<text class="ph" x="282" y="444" text-anchor="end">End</text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07127;0.07692;1.00000" values="1;1;0;0"/>
-<text class="big" x="330" y="112">IdentifyDomain</text>
-<text class="prompt" x="330" y="142">"Identify the exact domain of the task"</text>
-</g>
-<text class="line" x="330" y="205" opacity="0">Domain: PostgreSQL schema migration on a large live table<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.00905;0.01471;0.07127;0.07692;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">Not: generic SQL, not an ORM question<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.02149;0.02715;0.07127;0.07692;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07127;0.07692;1.00000" values="1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07692;0.08258;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">DefineOwner</text>
-<text class="prompt" x="330" y="142">"Define the senior expert"</text>
-</g>
-<text class="line" x="330" y="205" opacity="0">Owner: senior database engineer<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.08597;0.09163;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">Priorities: no downtime, safe rollback, data integrity<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.09842;0.10407;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="293" opacity="0">Trade-off accepted: slower rollout for safety<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.11086;0.11652;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.07692;0.08258;0.14819;0.15385;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.15385;0.15950;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">ListPractices</text>
-<text class="prompt" x="330" y="142">"Key techniques, tools, conventions"</text>
-</g>
-<text class="line" x="330" y="205" opacity="0">Add column as nullable, backfill in batches<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.16290;0.16855;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">CREATE UNIQUE INDEX CONCURRENTLY<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.17534;0.18100;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="293" opacity="0">Reversible up/down migration, tested on a copy<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.18778;0.19344;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.15385;0.15950;0.22511;0.23077;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23077;0.23643;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">ListAntiPatterns</text>
-<text class="prompt" x="330" y="142">"Common anti-patterns"</text>
-</g>
-<text class="line" x="330" y="205" opacity="0">ALTER that takes a long table lock<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23982;0.24548;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">NOT NULL + default on a big table in one step<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.25226;0.25792;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="293" opacity="0">Down migration that was never run<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.26471;0.27036;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.23077;0.23643;0.30204;0.30769;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.30769;0.31335;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">DefineCriteria</text>
-<text class="prompt" x="330" y="142">"Turn the lists into criteria"</text>
-</g>
-<text class="line" x="330" y="205" opacity="0">runnable: migration applies to a test database<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.31674;0.32240;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">runnable: rollback restores the old schema<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.32919;0.33484;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="293" opacity="0">runnable: no lock held longer than 1 s<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.34163;0.34729;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="337" opacity="0">judgement: names follow repo convention<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.35407;0.35973;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.30769;0.31335;0.37896;0.38462;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.38462;0.39027;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">Build</text>
-<text class="prompt" x="330" y="142">"Solve the task, applying the list"</text>
-</g>
-<text class="line" x="330" y="205" opacity="0">Writes 0042_add_user_email.sql (up and down)<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.39367;0.39932;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">Smallest change that fits every criterion<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.40611;0.41176;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.38462;0.39027;0.45588;0.46154;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.46154;0.46719;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">RunChecks</text>
-<text class="prompt" x="330" y="142">"Run every runnable check"</text>
-</g>
-<text class="line ok" x="330" y="205" opacity="0">apply to test database: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.47059;0.47624;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line ok" x="330" y="249" opacity="0">lock time 0.2 s: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.48303;0.48869;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line bad" x="330" y="293" opacity="0">rollback: FAIL, down drops the wrong index<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.49548;0.50113;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.46154;0.46719;0.53281;0.53846;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.53846;0.54412;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">ReviewJudgement</text>
-<text class="prompt" x="330" y="142">"Review the answer against the list"</text>
-</g>
-<text class="line ok" x="330" y="205" opacity="0">naming follows convention: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.54751;0.55317;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">Hostile review: backfill batch size not justified<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.55995;0.56561;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.53846;0.54412;0.60973;0.61538;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.61538;0.62104;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">Score</text>
-<text class="prompt" x="330" y="142">"Score: gaps, assumptions, risks"</text>
-</g>
-<text class="line bad" x="330" y="205" opacity="0">1 criterion failed, round 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.62443;0.63009;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">Verdict: go to Fix, not Report<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.63688;0.64253;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 0 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.61538;0.62104;0.68665;0.69231;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.69231;0.69796;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">Fix</text>
-<text class="prompt" x="330" y="142">"Fix only what failed"</text>
-</g>
-<text class="line" x="330" y="205" opacity="0">Round 1: down migration now drops the index it created<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.70136;0.70701;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line" x="330" y="249" opacity="0">Nothing that passed is rewritten<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.71380;0.71946;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.69231;0.69796;0.76357;0.76923;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.76923;0.77489;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">RunChecks</text>
-<text class="prompt" x="330" y="142">"Re-run failed and affected checks"</text>
-</g>
-<text class="line ok" x="330" y="205" opacity="0">apply: pass    lock: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.77828;0.78394;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="line ok" x="330" y="249" opacity="0">rollback: pass<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.79072;0.79638;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.76923;0.77489;0.84050;0.84615;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.84615;0.85181;0.91742;0.92308;1.00000" values="0;0;1;1;0;0"/>
-<text class="big" x="330" y="112">Score</text>
-<text class="prompt" x="330" y="142">"Score again"</text>
-</g>
-<text class="line ok" x="330" y="205" opacity="0">No failures. Verdict: Report<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.85520;0.86086;0.91742;0.92308;1.00000" values="0;0;1;1;0;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.84615;0.85181;0.91742;0.92308;1.00000" values="0;0;1;1;0;0"/></text>
-<g opacity="0"><animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.92308;0.92873;0.99434;1.00000" values="0;0;1;1;0"/>
-<text class="big" x="330" y="112">Report</text>
-<text class="prompt" x="330" y="142">"Report: result, evidence, assumptions, risks"</text>
-</g>
-<text class="line ok" x="330" y="205" opacity="0">Result: migration + rollback, all runnable checks passed<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.93213;0.93778;0.99434;1.00000" values="0;0;1;1;0"/></text>
-<text class="line" x="330" y="249" opacity="0">Assumption: table under 50 M rows<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.94457;0.95023;0.99434;1.00000" values="0;0;1;1;0"/></text>
-<text class="line bad" x="330" y="293" opacity="0">Risk: backfill time on production is unverified<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.95701;0.96267;0.99434;1.00000" values="0;0;1;1;0"/></text>
-<text class="meta" x="930" y="486" text-anchor="end" opacity="0">fix rounds used: 1 of 3<animate attributeName="opacity" dur="44.2s" repeatCount="indefinite" keyTimes="0.00000;0.92308;0.92873;0.99434;1.00000" values="0;0;1;1;0"/></text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="t d" font-family="Figtree,system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif">
+<title id="t">expert-loop state machine</title>
+<desc id="d">A mascot walks Domain, Owner, Checklist, Solve and Review. Review fails once, the loop returns to Solve, Review passes, and the run ends at Report.</desc>
+<defs><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#b9b4aa"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2b5cff"/></marker>
+<filter id="sh" x="-20%" y="-30%" width="140%" height="180%"><feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#5a4a30" flood-opacity=".13"/></filter>
+<radialGradient id="p" cx="1" cy="1" r=".85"><stop offset="0" stop-color="#f7c9dc" stop-opacity=".85"/><stop offset=".6" stop-color="#fbe3d2" stop-opacity=".35"/><stop offset="1" stop-color="#f7f3ec" stop-opacity="0"/></radialGradient>
+<radialGradient id="q" cx="0" cy="1" r=".6"><stop offset="0" stop-color="#fde7bf" stop-opacity=".7"/><stop offset="1" stop-color="#f7f3ec" stop-opacity="0"/></radialGradient></defs>
+<rect width="1100" height="620" rx="26" fill="#f7f3ec"/><rect width="1100" height="620" rx="26" fill="url(#p)"/><rect width="1100" height="620" rx="26" fill="url(#q)"/>
+<text x="70" y="78" font-size="42" font-weight="900" fill="#2b5cff" letter-spacing="-1">expert-loop</text>
+<circle cx="1000" cy="62" r="7" fill="#b9b4aa" fill-opacity=".45"/><circle cx="1024" cy="62" r="7" fill="#b9b4aa" fill-opacity=".45"/><circle cx="1048" cy="62" r="7" fill="#b9b4aa" fill-opacity=".45"/><circle cx="1000" cy="62" r="7" fill="#2b5cff" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.55556;0.5679;0.97531;0.98765;1" values="0;0;1;1;0;0"/></circle>
+<circle cx="36" cy="190" r="8" fill="#15110c"/>
+<path d="M48 190H66" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M48 190H66" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.00617;0.09938;0.10556;1" values="0;1;1;0;0"/></path>
+<path d="M284 190H441" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M284 190H441" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.11111;0.11728;0.21049;0.21667;1" values="0;0;1;1;0;0"/></path>
+<path d="M659 190H711" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M659 190H711" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.22222;0.2284;0.3216;0.32778;1" values="0;0;1;1;0;0"/></path>
+<path d="M737 168L759 190L737 212L715 190z" fill="#ffffff" stroke="#b9b4aa" stroke-width="2.4" filter="url(#sh)"/><path d="M737 168L759 190L737 212L715 190z" fill="none" stroke="#2b5cff" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.22222;0.2284;0.3216;0.32778;1" values="0;0;1;1;0;0"/></path>
+<path d="M763 190H816" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M763 190H816" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.22222;0.2284;0.3216;0.32778;1" values="0;0;1;1;0;0"/></path><text x="790" y="176" text-anchor="middle" font-size="14" font-weight="600" fill="#7a756b">clear</text>
+<path d="M737 214V290" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 8" marker-end="url(#ag)"/><path d="M737 214V290" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8" marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;1" values="0;0"/></path><text x="749" y="258" text-anchor="start" font-size="13" font-weight="600" fill="#7a756b">ambiguous</text>
+<rect x="682" y="292" width="110" height="38" rx="19" fill="#ffffff" filter="url(#sh)"/><text x="737" y="316" text-anchor="middle" font-size="15" font-weight="700" fill="#15110c">ask</text>
+<path d="M792 311H880V234" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="2 8" marker-end="url(#ag)"/><path d="M792 311H880V234" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8" marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;1" values="0;0"/></path>
+<path d="M925 234V396" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M925 234V396" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.33333;0.33951;0.43272;0.43889;1" values="0;0;1;1;0;0"/></path>
+<path d="M816 440H663" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M816 440H663" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.44444;0.45062;0.54383;0.55;0.66667;0.67284;0.76605;0.77222;1" values="0;0;1;1;0;0;1;1;0;0"/></path>
+<path d="M402 418L424 440L402 462L380 440z" fill="#ffffff" stroke="#b9b4aa" stroke-width="2.4" filter="url(#sh)"/><path d="M402 418L424 440L402 462L380 440z" fill="none" stroke="#2b5cff" stroke-width="3" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.44444;0.45062;0.54383;0.55;0.55556;0.56173;0.65494;0.66111;0.66667;0.67284;0.76605;0.77222;0.77778;0.78395;0.87716;0.88333;1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></path>
+<path d="M443 440H428" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M443 440H428" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.44444;0.45062;0.54383;0.55;0.66667;0.67284;0.76605;0.77222;1" values="0;0;1;1;0;0;1;1;0;0"/></path>
+<path d="M378 440H288" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M378 440H288" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.77778;0.78395;0.87716;0.88333;1" values="0;0;1;1;0;0"/></path><text x="333" y="426" text-anchor="middle" font-size="14" font-weight="600" fill="#3fa55a">pass</text>
+<path d="M402 464V548H925V484" fill="none" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round"  marker-end="url(#ag)"/><path d="M402 464V548H925V484" fill="none" stroke="#2b5cff" stroke-width="3" stroke-linecap="round"  marker-end="url(#ab)" opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.55556;0.56173;0.65494;0.66111;1" values="0;0;1;1;0;0"/></path><text x="660" y="576" text-anchor="middle" font-size="15" font-weight="700" fill="#2b5cff">fail</text>
+<circle cx="52" cy="440" r="14" fill="none" stroke="#15110c" stroke-width="2.4"/><circle cx="52" cy="440" r="7.5" fill="#15110c"/>
+
+<g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.77778;0.79012;0.96914;0.98148;1" values="0;0;1;1;0;0"/><circle cx="52" cy="440" r="14" fill="none" stroke="#2b5cff" stroke-width="3"/><circle cx="52" cy="440" r="7.5" fill="#2b5cff"/></g>
+<rect x="500" y="496" width="100" height="30" rx="15" fill="#ffffff" filter="url(#sh)"/><text x="550" y="516" text-anchor="middle" font-size="13" font-weight="600" fill="#7a756b">checks</text>
+<path d="M550 496V486" stroke="#b9b4aa" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ag)"/>
+<rect x="70" y="150" width="210" height="80" rx="40" fill="#ffffff" filter="url(#sh)"/><text x="175.0" y="197.0" text-anchor="middle" font-size="22" font-weight="700" fill="#15110c">Domain</text><g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.00926;0.10185;0.11111;1" values="0;1;1;0;0"/><rect x="70" y="150" width="210" height="80" rx="40" fill="#15110c"/><text x="175.0" y="197.0" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Domain</text></g><rect x="445" y="150" width="210" height="80" rx="40" fill="#ffffff" filter="url(#sh)"/><text x="550.0" y="197.0" text-anchor="middle" font-size="22" font-weight="700" fill="#15110c">Owner</text><g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.11111;0.12037;0.21296;0.22222;1" values="0;0;1;1;0;0"/><rect x="445" y="150" width="210" height="80" rx="40" fill="#15110c"/><text x="550.0" y="197.0" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Owner</text></g><rect x="820" y="150" width="210" height="80" rx="40" fill="#ffffff" filter="url(#sh)"/><text x="925.0" y="197.0" text-anchor="middle" font-size="22" font-weight="700" fill="#15110c">Checklist</text><g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.22222;0.23148;0.32407;0.33333;1" values="0;0;1;1;0;0"/><rect x="820" y="150" width="210" height="80" rx="40" fill="#15110c"/><text x="925.0" y="197.0" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Checklist</text></g><rect x="820" y="400" width="210" height="80" rx="40" fill="#ffffff" filter="url(#sh)"/><text x="925.0" y="447.0" text-anchor="middle" font-size="22" font-weight="700" fill="#15110c">Solve</text><g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.33333;0.34259;0.43519;0.44444;0.55556;0.56481;0.65741;0.66667;1" values="0;0;1;1;0;0;1;1;0;0"/><rect x="820" y="400" width="210" height="80" rx="40" fill="#15110c"/><text x="925.0" y="447.0" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Solve</text></g><rect x="445" y="400" width="210" height="80" rx="40" fill="#ffffff" filter="url(#sh)"/><text x="550.0" y="447.0" text-anchor="middle" font-size="22" font-weight="700" fill="#15110c">Review</text><g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.44444;0.4537;0.5463;0.55556;0.66667;0.67593;0.76852;0.77778;1" values="0;0;1;1;0;0;1;1;0;0"/><rect x="445" y="400" width="210" height="80" rx="40" fill="#15110c"/><text x="550.0" y="447.0" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Review</text></g><rect x="70" y="400" width="210" height="80" rx="40" fill="#ffffff" filter="url(#sh)"/><text x="175.0" y="447.0" text-anchor="middle" font-size="22" font-weight="700" fill="#15110c">Report</text><g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.77778;0.78704;0.97222;0.98148;1" values="0;0;1;1;0;0"/><rect x="70" y="400" width="210" height="80" rx="40" fill="#15110c"/><text x="175.0" y="447.0" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">Report</text></g>
+<g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.48148;0.49074;0.5463;0.55556;1" values="0;0;1;1;0;0"/><circle cx="649" cy="404" r="16" fill="#e5604d"/><path d="M643 398L655 410M655 398L643 410" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g><g opacity="0"><animate attributeName="opacity" dur="16.2s" repeatCount="indefinite" keyTimes="0;0.7037;0.71296;0.76852;0.77778;1" values="0;0;1;1;0;0"/><circle cx="649" cy="404" r="16" fill="#3fa55a"/><path d="M642 404L647 410L657 398" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><animateTransform attributeName="transform" type="translate" dur="16.2s" repeatCount="indefinite" calcMode="linear" keyTimes="0;0.11111;0.14506;0.22222;0.25617;0.33333;0.36728;0.44444;0.4784;0.55556;0.58951;0.66667;0.70062;0.77778;0.81173;0.96914;1.0" values="145.0 84.0;145.0 84.0;520.0 84.0;520.0 84.0;895.0 84.0;895.0 84.0;895.0 334.0;895.0 334.0;520.0 334.0;520.0 334.0;895.0 334.0;895.0 334.0;520.0 334.0;520.0 334.0;145.0 334.0;145.0 334.0;145.0 84.0"/>
+<g><animateTransform attributeName="transform" type="translate" dur="0.6s" repeatCount="indefinite" values="0 0;0 -4;0 0"/>
+<g transform="scale(1)"><rect x="-9" y="16" width="9" height="14" fill="#d97757"/><rect x="60" y="16" width="9" height="14" fill="#d97757"/><rect width="60" height="44" rx="4" fill="#d97757"/><rect x="12" y="13" width="7" height="12" fill="#15110c"/><rect x="41" y="13" width="7" height="12" fill="#15110c"/><rect x="8" y="44" width="9" height="14" fill="#d97757"/><rect x="22" y="44" width="9" height="14" fill="#d97757"/><rect x="35" y="44" width="9" height="14" fill="#d97757"/><rect x="49" y="44" width="9" height="14" fill="#d97757"/></g></g></g>
 </svg>

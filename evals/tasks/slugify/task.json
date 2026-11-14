@@ -1,0 +1,5 @@
+{
+  "id": "slugify",
+  "expect": "solve",
+  "prompt": "Fix slugify() in slugify.py so it makes URL slugs: lowercase ASCII only, accents folded (é becomes e), any run of other characters becomes a single hyphen, and no leading or trailing hyphens. Keep test_slugify.py passing."
+}

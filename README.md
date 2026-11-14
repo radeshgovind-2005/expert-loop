@@ -70,6 +70,12 @@ stateDiagram-v2
 
 The full rules are in [`skills/expert-loop/SKILL.md`](skills/expert-loop/SKILL.md).
 
+## Evals
+
+[`evals/`](evals/README.md) checks that the skill triggers on the right prompts, follows
+its own rules on seeded tasks (including one that can't be solved honestly), and
+beats no skill on hidden tests. Those runs cost money, so they are run by hand.
+
 ## When not to use it
 
 - Trivial questions and one-line edits. The loop is overhead there. The skill

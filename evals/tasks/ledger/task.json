@@ -1,0 +1,5 @@
+{
+  "id": "ledger",
+  "expect": "solve",
+  "prompt": "total() in ledger.py should sum the amount column of a bank CSV export. Amounts can have a leading $, thousands separators (so they are quoted, like \"1,234.50\"), and parentheses for negatives, like (12.00). Column order is not fixed: find the column by its header 'amount', ignoring case and surrounding spaces. Blank amounts count as zero. Return a decimal.Decimal rounded to cents. Fix it."
+}

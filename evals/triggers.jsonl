@@ -1,0 +1,24 @@
+{"id": "t-explicit-1", "should_trigger": true, "prompt": "expert loop: write a bash script that rotates log files in ./logs, keeping the last 7"}
+{"id": "t-explicit-2", "should_trigger": true, "prompt": "Use the expert loop for this: design a retry policy with exponential backoff and jitter for a payment API client in Python"}
+{"id": "t-explicit-3", "should_trigger": true, "prompt": "Run the expert loop on this: write a SQL query for monthly active users from an events(user_id, ts) table"}
+{"id": "t-rigor-1", "should_trigger": true, "prompt": "I need a rigorous, verified answer: write a Python function that parses ISO 8601 durations like P3DT4H5M and prove it works"}
+{"id": "t-rigor-2", "should_trigger": true, "prompt": "Write a migration plan to add a NOT NULL column to a 50M-row Postgres table with no downtime. Verify each step, I can't afford mistakes."}
+{"id": "t-rigor-3", "should_trigger": true, "prompt": "Implement a thread-safe LRU cache in Python with TTL expiry. It's going into production, so check it properly."}
+{"id": "t-rigor-4", "should_trigger": true, "prompt": "Write a regex that validates IPv4 addresses (no leading zeros, 0-255 per octet) and test it thoroughly against edge cases before you give it to me"}
+{"id": "t-rigor-5", "should_trigger": true, "prompt": "Calculate the monthly payment and total interest on a 30-year $450,000 mortgage at 6.25%, and double-check the numbers"}
+{"id": "t-rigor-6", "should_trigger": true, "prompt": "Write a Dockerfile for a Python FastAPI app following best practices: small image, non-root user, pinned versions. Make sure it actually meets those."}
+{"id": "t-rigor-7", "should_trigger": true, "prompt": "Write a function that merges overlapping calendar intervals, handling all edge cases, and verify it against tests"}
+{"id": "t-rigor-8", "should_trigger": true, "prompt": "Produce a careful, checked implementation of a token-bucket rate limiter in TypeScript; correctness matters more than speed"}
+{"id": "t-rigor-9", "should_trigger": true, "prompt": "Build a CSV-to-JSON converter in Python that handles quoted fields, embedded newlines and BOMs. Quality matters, verify it."}
+{"id": "n-trivial-1", "should_trigger": false, "prompt": "what's 17 times 23?"}
+{"id": "n-trivial-2", "should_trigger": false, "prompt": "What does the -r flag do in cp?"}
+{"id": "n-trivial-3", "should_trigger": false, "prompt": "hi"}
+{"id": "n-trivial-4", "should_trigger": false, "prompt": "Translate 'good morning' into Spanish"}
+{"id": "n-trivial-5", "should_trigger": false, "prompt": "What's the difference between a list and a tuple in Python? One sentence."}
+{"id": "n-trivial-6", "should_trigger": false, "prompt": "Give me a synonym for 'quick'"}
+{"id": "n-trivial-7", "should_trigger": false, "prompt": "How do I exit vim?"}
+{"id": "n-trivial-8", "should_trigger": false, "prompt": "Write a one-line Python expression that reverses a string"}
+{"id": "n-trivial-9", "should_trigger": false, "prompt": "What year did Python 3.0 come out?"}
+{"id": "n-trivial-10", "should_trigger": false, "prompt": "Suggest a name for a cat"}
+{"id": "n-trivial-11", "should_trigger": false, "prompt": "Is JSON case-sensitive?"}
+{"id": "n-trivial-12", "should_trigger": false, "prompt": "What's the git command to see the current branch?"}
